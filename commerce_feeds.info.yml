@@ -1,0 +1,5 @@
+name: commerce_feeds
+type: module
+description: Import Product and product variations
+core: 8.x
+package: synapse
