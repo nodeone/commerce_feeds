@@ -22,7 +22,7 @@ class CommercePrice extends FieldTargetBase {
    */
   protected static function prepareTarget(FieldDefinitionInterface $field_definition) {
     return FieldTargetDefinition::createFromFieldDefinition($field_definition)
-      ->addProperty('amount')
+      ->addProperty('number')
       ->addProperty('currency_code');
   }
 
@@ -30,9 +30,9 @@ class CommercePrice extends FieldTargetBase {
    * {@inheritdoc}
    */
   protected function prepareValue($delta, array &$values) {
-    $values['amount'] = trim($values['amount']);
-    if(!is_numeric($values['amount'])){
-      $values['amount'] = false;
+    $values['number'] = trim($values['number']);
+    if(!is_numeric($values['number'])){
+      $values['number'] = false;
     }
   }
 
